@@ -38,5 +38,6 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 *.env
-db-data
+dbdata
 certs
+.gitconfig
