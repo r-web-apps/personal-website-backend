@@ -9,6 +9,7 @@ import { WorkItem, WorkItemSchema } from '../schemas/work-item-schema';
 import { SkillItemsService } from './skill-items/skill-items.service';
 import { SkillItemsController } from './skill-items/skill-items.controller';
 import { SkillItem, SkillItemSchema } from '../schemas/skill-item-schema';
+import { AuthController } from './auth/auth.controller';
 
 @Module({
   imports: [
@@ -18,7 +19,12 @@ import { SkillItem, SkillItemSchema } from '../schemas/skill-item-schema';
       { name: SkillItem.name, schema: SkillItemSchema },
     ]),
   ],
-  controllers: [StatusController, WorkItemController, SkillItemsController],
+  controllers: [
+    StatusController,
+    WorkItemController,
+    SkillItemsController,
+    AuthController,
+  ],
   providers: [StatusService, WorkItemService, SkillItemsService],
 })
 export class ApiModule {}
