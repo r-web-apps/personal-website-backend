@@ -7,9 +7,18 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-    ports:
-      - 3004:3004
-    env_file:
-      - int.env
-    #networks:
-    #  - webnet
+    entrypoint: ./startup.sh
+    #ports:
+    #  - 3004:3004
+    #env_file:
+    #  - int.env
+    networks:
+      proxy:
+        aliases:
+          - dev-rubeen-dev-api
+
+
+networks:
+  proxy:
+    external:
+      name: hosting-network
