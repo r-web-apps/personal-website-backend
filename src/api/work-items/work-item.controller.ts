@@ -23,8 +23,6 @@ export class WorkItemController {
   async createElement(
     @Body() item: InsertUpdateWorkItemDto,
   ): Promise<WorkItem> {
-    console.log('Filter: ', item.filter);
-    console.log('Update: ', item.update);
     const filter = item.filter;
     const update = item.update;
     return this.workItemsService.upsert(filter, update);
