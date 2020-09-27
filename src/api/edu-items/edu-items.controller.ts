@@ -1,8 +1,8 @@
 import { EduItemsService } from './edu-items.service';
 import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { EduItem } from '../../schemas/edu-item.schema';
-import { InsertUpdateEduItemDto } from '../../schemas/edu-item/insert-update.edu-item.dto';
-import { FindEduItemDto } from '../../schemas/edu-item/find.edu-item.dto';
+import { InsertUpdateEduItemDto } from '../../schemas/dto/edu-item/insert-update.edu-item.dto';
+import { FindEduItemDto } from '../../schemas/dto/edu-item/find.edu-item.dto';
 
 @Controller('/edu-items')
 export class EduItemsController {

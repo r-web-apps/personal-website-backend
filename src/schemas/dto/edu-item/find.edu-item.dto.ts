@@ -1,4 +1,4 @@
-import { Duration } from '../edu-item.schema';
+import { Duration } from '../../edu-item.schema';
 
 export class FindEduItemDto {
   readonly subject?: string;

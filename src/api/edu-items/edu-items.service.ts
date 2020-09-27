@@ -1,8 +1,8 @@
 import { EduItem } from '../../schemas/edu-item.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { FindEduItemDto } from '../../schemas/edu-item/find.edu-item.dto';
-import { CreateEduItemDto } from '../../schemas/edu-item/create.edu-item.dto';
+import { FindEduItemDto } from '../../schemas/dto/edu-item/find.edu-item.dto';
+import { CreateEduItemDto } from '../../schemas/dto/edu-item/create.edu-item.dto';
 
 export class EduItemsService {
   constructor(

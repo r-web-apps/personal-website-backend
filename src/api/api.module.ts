@@ -13,6 +13,12 @@ import { AuthController } from './auth/auth.controller';
 import { EduItem, EduItemSchema } from '../schemas/edu-item.schema';
 import { EduItemsController } from './edu-items/edu-items.controller';
 import { EduItemsService } from './edu-items/edu-items.service';
+import {
+  PortfolioItem,
+  PortfolioItemSchema,
+} from '../schemas/portfolio-item.schema';
+import { PortfolioItemsController } from './portfolio-items/portfolio-items.controller';
+import { PortfolioItemsService } from './portfolio-items/portfolio-items.service';
 
 @Module({
   imports: [
@@ -21,6 +27,7 @@ import { EduItemsService } from './edu-items/edu-items.service';
       { name: WorkItem.name, schema: WorkItemSchema },
       { name: SkillItem.name, schema: SkillItemSchema },
       { name: EduItem.name, schema: EduItemSchema },
+      { name: PortfolioItem.name, schema: PortfolioItemSchema },
     ]),
   ],
   controllers: [
@@ -28,6 +35,7 @@ import { EduItemsService } from './edu-items/edu-items.service';
     WorkItemController,
     SkillItemsController,
     EduItemsController,
+    PortfolioItemsController,
     AuthController,
   ],
   providers: [
@@ -35,6 +43,7 @@ import { EduItemsService } from './edu-items/edu-items.service';
     WorkItemService,
     SkillItemsService,
     EduItemsService,
+    PortfolioItemsService,
   ],
 })
 export class ApiModule {}
